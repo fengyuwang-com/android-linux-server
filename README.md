@@ -51,7 +51,24 @@ vncviewer -passwd ~/.vnc/passwd <PHONE_IP>:5901
 | [docs/07-自愈机制.md](docs/07-自愈机制.md) | 4 层冗余保障 + dpkg 钩子 |
 | [docs/08-故障排查.md](docs/08-故障排查.md) | 所有已知问题的症状与解法 |
 | [docs/09-无root能力边界.md](docs/09-无root能力边界.md) | 能做什么、不能做什么、Shizuku 补充 |
-| [docs/10-AI-Agent部署.md](docs/10-AI-Agent部署.md) | 在手机上跑 AI 编码 Agent 的方案与现状 |
+| [docs/10-AI-Agent部署.md](docs/10-AI-Agent部署.md) | 在手机上跑 AI 编码 Agent：Bionic vs glibc、Claude Code 实测跑通、**Hermes 推荐方案**、第三方网关协议转换坑 |
+
+---
+
+## AI Agent 结论速览
+
+手机（无 root Termux）上跑 AI 编码 Agent，**推荐 Hermes**：
+
+| Agent | 能装吗 | 能接 DeepSeek 吗 | 评价 |
+|-------|--------|-----------------|------|
+| **Hermes** | ✅ 官方 Termux 文档 | ✅ 原生支持 | **首选**，纯 Python，协议天然兼容 |
+| **Claude Code** | ✅ 已实测跑通 | ❌ 需协议转换 | 编码最强，但认证走不通 |
+| **OpenCode** | ⚠️ 能装，`run` 崩溃 | ✅ | `serve` 模式可用 |
+| **Aider** | ✅ 纯 Python | ✅ | 轻量备选 |
+
+**核心洞察**：Claude Code 说 Anthropic 协议，DeepSeek 说 OpenAI 协议，**光改 base_url 不够，必须有转换层**。Hermes 原生说 OpenAI 协议，直接对上，不折腾。
+
+详见 [docs/10-AI-Agent部署.md](docs/10-AI-Agent部署.md)
 
 ---
 
