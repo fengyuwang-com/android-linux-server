@@ -153,6 +153,8 @@ Android 会把息屏后的后台应用移入**冻结组**，暂停 CPU 调度，
 - [Termux SSH 锁屏断开详解：为什么 MIUI 会杀掉 untrusted_app 进程](https://www.cnblogs.com/zjw-blog/p/19410463)
 - [驯服 HyperOS 3：Android 16 下 Termux SSH 永不断连的极简方案](https://www.cnblogs.com/zjw-blog/p/19433176)
 - [如何用 VNC 遠端連線至 Termux 的 Linux 桌面](https://ivonblog.com/posts/vncserver-termux/)
+- [Hermes Agent 官方 Termux 文档](https://hermes-agent.nousresearch.com/docs/getting-started/termux)
+- [Hermes Agent 官方配置文档](https://hermes-agent.nousresearch.com/docs/user-guide/configuration)
 
 ---
 
