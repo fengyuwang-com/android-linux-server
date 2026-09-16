@@ -1,0 +1,24 @@
+# 用户特定信息 — 不要提交
+# 这些文件包含你自己的 IP、密钥、密码，模板只提交 *.example 版本
+
+# SSH 密钥
+*.pem
+id_rsa*
+id_ed25519*
+!*.pub.example
+
+# VNC 密码文件（二进制，含实际密码）
+passwd
+!passwd.example
+
+# 手机端静音音频（可自行生成，不必入库）
+quiet_1min.amr
+
+# 本机实测产生的日志
+*.log
+watchdog.log
+
+# 系统
+.DS_Store
+Thumbs.db
+desktop.ini
