@@ -36,6 +36,16 @@ ssh nubia '~/start-vnc.sh'
 vncviewer -passwd ~/.vnc/passwd <PHONE_IP>:5901
 ```
 
+### 日常只记一个命令：`dt`
+
+打开 Termux 时桌面会**自动启动**并打印连接地址。想控制就用：
+
+```bash
+dt          # 看状态（含连接地址）
+dt on       # 开
+dt off      # 关
+```
+
 ---
 
 ## 文档
@@ -139,9 +149,10 @@ Android 会把息屏后的后台应用移入**冻结组**，暂停 CPU 调度，
 
 | 脚本 | 作用 |
 |------|------|
+| **`dt.sh`** | **桌面一键开关：`dt on` / `dt off` / `dt status`** |
 | `keepalive.sh` | 音频焦点保活 |
 | `watchdog.sh` | cron 看门狗（守护 sshd/保活/VNC） |
-| `start-vnc.sh` / `stop-vnc.sh` | 图形桌面启停 |
+| `start-vnc.sh` / `stop-vnc.sh` | 图形桌面启停（`dt` 的底层脚本） |
 | `setup-sshd-hook.sh` | 安装 dpkg 后置钩子 |
 | `rescue-via-adb.sh` | SSH 断了时用 ADB 救援 |
 
