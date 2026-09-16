@@ -1,0 +1,13 @@
+# Shell scripts must keep LF: they run inside Termux (Linux).
+*.sh text eol=lf
+
+# Docs and config: normalise to LF, GitHub renders either fine.
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.conf text eol=lf
+
+# Binary
+*.apk binary
+*.deb binary
+*.amr binary
